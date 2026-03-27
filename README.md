@@ -50,14 +50,15 @@ cd house-price-predictor
 ### 2. Crear entorno virtual
 
 ```bash
-uv venv --python python3.11
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+py -3.11 -m venv casa
+casa\Scripts\activate
+  
 ```
 
 ### 3. Instalar dependencias
 
 ```bash
-uv pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ---
@@ -66,8 +67,8 @@ uv pip install -r requirements.txt
 
 ```bash
 cd deployment/mlflow
-docker compose -f mlflow-docker-compose.yml up -d
-docker compose ps
+docker compose up -d
+
 ```
 
 ### Alternativa con Podman
